@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  outline: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .contaiiner-body {
+    @apply overflow-x-hidden flex flex-col w-full capitalize;
+  }
+  .add-btn {
+    @apply bg-white rounded-full hover:scale-105;
+  }
+
+  /* calendar */
+  .calendar-body {
+    @apply z-20 absolute top-10 left-0 right-0 mx-auto w-fit;
+  }
+
+  /* add MENU (if true)  */
+  .add-menu {
+    @apply z-10 absolute  w-full rounded-t-xl flex items-end;
+  }
+  .form-menu {
+    @apply flex flex-col bg-white w-full p-4 rounded-t-3xl;
+  }
+
+  .add-menu-title {
+    @apply text-3xl font-bold text-center pb-4 text-blue-400;
+  }
+  .add-input {
+    @apply transition ease-in-out duration-200 rounded-xl px-2 outline-none border-blue-300 border-2 focus:border-blue-500 focus:border-4;
+  }
+  .alert {
+    @apply text-sm ml-5 italic text-red-500;
+  }
+  .additional-buttons {
+    @apply flex flex-row gap-4 my-2;
+  }
+  .addi-btn {
+    @apply w-fit cursor-pointer px-3 py-2 bg-blue-500 rounded-lg text-white hover:bg-blue-600;
+  }
+  .form-btn {
+    @apply w-full p-4 rounded-xl outline-none border-none text-xl font-bold text-white;
+  }
+
+  /*  */
+  /* CONTENT MENU */
+  .content-menu {
+    @apply bg-white min-h-[93vh]  max-h-[93vh] rounded-t-[32px];
+  }
+  .todos-menu > * {
+    @apply p-3 text-2xl font-bold text-blue-400 w-full hover:bg-blue-50 transition duration-100 ease-in-out text-center border-b-4 gap-2 cursor-pointer;
+  }
+  .all-task {
+    @apply rounded-tl-3xl;
+  }
+  .complete-task {
+    @apply rounded-tr-3xl;
+  }
+  .message {
+    @apply text-3xl text-center text-slate-400;
+  }
+  .active-title {
+    @apply border-blue-400;
+  }
+  .todo-list {
+    @apply flex flex-col;
+  }
+  .todo-item {
+    @apply rounded-2xl py-2 flex gap-4 items-center hover:scale-[102%] transition-all duration-100 ease-in-out bg-white;
+  }
+  .todo-title {
+    @apply h-20 flex flex-col justify-center w-full cursor-pointer;
+  }
+}
+
+.calendar-body * {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.todo-item {
+  box-shadow: rgba(22, 49, 91, 0.208) 0 10px 20px;
+}
+
+.img-empty {
+  background-image: url("./images/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
